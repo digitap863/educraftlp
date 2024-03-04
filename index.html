@@ -77,41 +77,36 @@
 
                 <div class="relative lg:flex justify-center hidden">
                   <div class="lg:absolute lg:top-20 drop-shadow-xl bg-[#ffffff] p-6 rounded-3xl ">
-                    <form class="md:min-w-96 mx-auto">
+                    <form class="md:min-w-96 mx-auto" name="contact-form">
                       <h4 class="text-[#0F2F64] text-xl md:text-[28px] font-semibold">Fill out the form<br>and we’ll be
                         in touch.</h4>
                       <div class="my-5">
-                        <input type="text" id="name"
+                        <input type="text" id="name" name="name"
                           class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
                           placeholder="Your full name" required />
                       </div>
                       <div class="mb-5">
-                        <input type="text" id="email"
+                        <input type="text" id="email" name="email"
                           class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
                           placeholder="Your Email" required />
                       </div>
                       <div class="mb-5">
                         <!-- <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 ">Repeat password</label> -->
-                        <input type="number" id="phone"
+                        <input type="number" id="phone" name="phone"
                           class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
                           placeholder="Your mobile number" required />
                       </div>
+                      <input type="text" id="city" name="city"
+                          class="shadow-sm bg-gray-50 border mb-5 border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
+                          placeholder="City" required />
+
                       <div class="mb-5">
                         <select
-                          class="py-3 px-4 pe-9 block w-full shadow-sm bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none capitalize">
-                          <option selected>Select your city</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                        </select>
-                      </div>
-                      <div class="mb-5">
-                        <select
-                          class="py-3 px-4 pe-9 block w-full shadow-sm bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none capitalize">
+                          class="py-3 px-4 pe-9 block w-full shadow-sm bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none capitalize" name="LocationPreferred">
                           <option selected>Select Preferred study destination</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
+                          <option>Canada</option>
+                          <option>UK</option>
+                          <option>Australia</option>
                         </select>
                       </div>
 
@@ -136,6 +131,7 @@
                             stroke-width="0" fill="currentColor" />
                         </svg>Book Your Free Consultation</button>
                     </form>
+                    <div id="submit-message" class="hidden text-green-600">Our team will contact you shortly</div>
                   </div>
                 </div>
 
@@ -143,28 +139,31 @@
             </div>
 
             <!-- form mobile -->
-            <div class="flex justify-center lg:hidden">
+            <div class="flex justify-center lg:hidden" >
               <div class="drop-shadow-xl bg-[#ffffff] p-6 rounded-3xl ">
-                <form class="md:min-w-96 mx-auto">
+                <form class="md:min-w-96 mx-auto" name="contact-form-m">
                   <h4 class="text-[#0F2F64] text-xl md:text-[28px] font-semibold">Fill out the form<br>and we’ll be in
                     touch.</h4>
                   <div class="my-5">
-                    <input type="text" id="name"
+                    <input type="text" id="name" name="name"
                       class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
                       placeholder="Your full name" required />
                   </div>
                   <div class="mb-5">
-                    <input type="text" id="name"
+                    <input type="email" id="email" name="email"
                       class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
-                      placeholder="Your last name" required />
+                      placeholder="Your Email" required />
                   </div>
                   <div class="mb-5">
                     <!-- <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 ">Repeat password</label> -->
-                    <input type="number" id="phone"
+                    <input type="number" id="phone" name="phone"
                       class="shadow-sm bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
                       placeholder="Your mobile number" required />
                   </div>
-                  <div class="mb-5">
+                  <input type="text" id="name" name="city"
+                  class="shadow-sm bg-gray-50 border mb-5 border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 capitalize"
+                  placeholder="Your full name" required />
+                  <!-- <div class="mb-5">
                     <select
                       class="py-3 px-4 pe-9 block w-full shadow-sm bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none capitalize">
                       <option selected>Select your city</option>
@@ -172,14 +171,14 @@
                       <option>2</option>
                       <option>3</option>
                     </select>
-                  </div>
+                  </div> -->
                   <div class="mb-5">
-                    <select
+                    <select required name="LocationPreferred"
                       class="py-3 px-4 pe-9 block w-full shadow-sm bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none capitalize">
                       <option selected>Select Preferred study destination</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
+                      <option>Canada</option>
+                      <option>UK</option>
+                      <option>Australia</option>
                     </select>
                   </div>
 
@@ -202,8 +201,9 @@
                       <path
                         d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
                         stroke-width="0" fill="currentColor" />
-                    </svg>Book Your Free Consultation</button>
-                </form>
+                      </svg>Book Your Free Consultation</button>
+                    </form>
+                    <div id="submit-message-m" class="hidden text-green-600">Our team will contact you shortly</div>
               </div>
             </div>
 
@@ -266,14 +266,14 @@
             class="w-10 h-10 lg:w-16 lg:h-16  rounded-full bg-[#1EBCB4] absolute lg:left-12 left-4 top-4 moveDot-heading">
           </div>
           <h1
-            class="text-[#273069] font-semibold text-base lg:text-[42px] relative leading-none overflow-hidden mb-4 lg:mb-10">
+            class="text-[#273069] font-semibold text-xl lg:text-[42px] relative leading-none z-10 mt- overflow-hidden mb-4 lg:mb-10">
             Upcoming intake in
-            <span class="relative font-bold text-[#662DFF] text-xl lg:text-[42px]">April</span>
+            <span class="relative font-bold text-[#662DFF] text-2xl lg:text-[42px]">April</span>
           </h1>
           <img src="assets/mic.png"
-            class="absolute w-40 h-40 lg:w-60 lg:h-60 left-[58%] lg:left-[48%] bottom-14 lg:bottom-16 object-contain max-lg:scale-y-[-1]"
+            class="absolute w-40 h-40 lg:w-60 lg:h-60 -right-5 lg:left-[48%] -top-10 lg:bottom-16 object-contain max-lg:scale-y-[-1]"
             alt="">
-          <img src="assets/flags (1).png" class="w-56 sm:w-auto sm:h-16 object-contain ml-3" alt="">
+          <img src="assets/flags (1).png" class="w-56 sm:w-auto sm:h-16 object-contain ml-10" alt="">
         </div>
 
         <div class="mx-auto max-w-screen-2xl relative lg:px-16 px-10 lg:py-8">
@@ -427,7 +427,7 @@
 
         <!-- service mobile -->
         <section class="mx-auto relative px-4 py-8 md:hidden flex flex-col">
-          <h3 class="text-xl font-semibold text-[#0F2F64]">
+          <h3 class="text-3xl font-semibold text-[#0F2F64]">
             Why Choose Edukraft For Planning Your <span class="text-[#FFB201]">Study Abroad</span> Dreams?
           </h3>
 
@@ -511,7 +511,7 @@
         <!-- social media section  -->
         <section class="mx-auto max-w-screen-2xl relative px-4 py-8 lg:px-16">
           <div class="md:flex md:items-center md:justify-between">
-            <h3 class="text-xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-sm">Check Out Our <span
+            <h3 class="text-3xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-sm">Check Out Our <span
                 class="text-[#1EBCB4] relative z-50">Social Handles</span> <span class="relative z-1">for it</span>
               <div class="relative">
                 <div
@@ -577,9 +577,10 @@
         <section class="mx-auto max-w-screen-2xl relative px-4 py-8 lg:px-16">
           <div class="md:flex md:items-center md:justify-around">
             <div class="">
-              <h3 class="my-4 text-xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-xs max-w-[190px] capitalize">
+              <h3 class="my-4 text-3xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-xs max-w-[190px] capitalize">
                 What <span class="text-[#3870FF] font-bold">we’ve done</span> so far
               </h3>
+              <img src="assets/Group 189.png" class="object-contain lg:hidden max-w-xs lg:max-w-lg" alt="">
               <p class="text-lg text-[#35313E] lg:max-w-xl">EduKraft is a leading overseas education consultancy
                 offering personalised services to students aspiring to continue their higher education in the Abroad.
               </p>
@@ -626,14 +627,14 @@
             </div>
 
             <div class="flex gap-8 justify-end">
-              <img src="assets/Group 189.png" class="object-contain max-w-xs lg:max-w-lg" alt="">
+              <img src="assets/Group 189.png" class="object-contain hidden lg:block max-w-xs lg:max-w-lg" alt="">
             </div>
           </div>
 
         </section>
 
         <section class="mx-auto max-w-screen-2xl relative px-4 py-8 lg:px-16">
-          <h3 class="my-3 text-xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-sm"><span class="text-[#4668E4]">Top
+          <h3 class="my-3 text-3xl font-semibold text-[#0F2F64] lg:text-4xl max-w-[70%] lg:max-w-sm"><span class="text-[#4668E4]">Top
               Universities</span> we work with
           </h3>
 
@@ -677,7 +678,7 @@
 
         <section class="mx-auto max-w-screen-2xl relative px-4 py-8 lg:px-16">
 
-          <h3 class="my-4 text-xl font-semibold text-[#0F2F64] lg:text-4xl lg:max-w-sm">Don't take <span
+          <h3 class="my-4 text-3xl font-semibold text-[#0F2F64] lg:text-4xl max-w-[80%] lg:max-w-sm">Don't take <span
               class="text-[#713CFF]">our word</span> for it</h3>
 
           <div class="swiper testimSwiper relative">
@@ -840,6 +841,45 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjkQ05ZckA2_gw3WHno7WDRPD_pqMHK7mxhhg3L-xGlEDjlL2eG_4qAYy1aX1RKTRjyA/exec';
+    const form = document.forms['contact-form'];
+    const submitMessage = document.getElementById('submit-message');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                console.log('Success!', response);
+                // Show submit message
+                submitMessage.classList.remove('hidden');
+                // Reset form fields
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
+<script>
+  const scriptURLm = 'https://script.google.com/macros/s/AKfycbxjkQ05ZckA2_gw3WHno7WDRPD_pqMHK7mxhhg3L-xGlEDjlL2eG_4qAYy1aX1RKTRjyA/exec';
+  const formm = document.forms['contact-form-m'];
+  const submitMessagem = document.getElementById('submit-message-m');
+
+  formm.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURLm, { method: 'POST', body: new FormData(formm)})
+          .then(response => {
+              console.log('Success!', response);
+              // Show submit message
+              submitMessagem.classList.remove('hidden');
+              // Reset form fields
+              formm.reset();
+          })
+          .catch(error => console.error('Error!', error.message));
+  });
+</script>
+
 
   <script>
     var swiper = new Swiper(".mySwiper", {
